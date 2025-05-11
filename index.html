@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #003366;
+      --accent: #00aaff;
+      --bg: #f4f8fb;
+      --text: #333;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color:rgba(255, 192, 203, 0.456);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Hero Section */
+    #hero {
+      background-color: rgba(255, 192, 203, 0.786);
+      padding: 60px 20px;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: auto;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .hero-image img {
+      width: 300px;
+      height: 300px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background:pink;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.05);
+      margin-bottom: 30px;
+    }
+
+    .skills-bar {
+      margin-top: 10px;
+    }
+
+    .skill-title {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    .bar {
+      background-color: pink;
+      border-radius: 20px;
+      height: 10px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      background-color: var(--accent);
+      height: 10px;
+      width: 0;
+      transition: width 1s ease-in-out;
+    }
+
+    .project, .experience-item {
+      margin-bottom: 20px;
+    }
+
+    .project h3, .experience-item h3 {
+      margin-bottom: 5px;
+    }
+
+    #resume button {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    #resume button:hover {
+      background-color: var(--accent);
+    }
+
+    .experience-timeline {
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+    }
+
+    .experience-item {
+      position: relative;
+      padding-left: 10px;
+    }
+
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background-color: var(--accent);
+      border-radius: 50%;
+    }
+
+    footer {
+      text-align: center;
+      background-color:pink;
+      color: black;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-container">
+    <div class="hero-image">
+      <img src="photo2.jpeg" alt="Your Photo" />
+    </div>
+    <div class="hero-text">
+      <h1>Sanya Sinha</h1>
+      <p><strong>Software Developer | Tech Enthusiast</strong></p>
+      <p>
+        I’m a passionate developer skilled in creating fast, scalable, and user-friendly web applications.
+        I specialize in web development and integrating AI tools into real-world projects.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="card">
+    <div class="skill-title">HTML & CSS</div>
+    <div class="bar"><div class="bar-fill" style="width: 90%;"></div></div>
+
+    <div class="skill-title">JavaScript & React</div>
+    <div class="bar"><div class="bar-fill" style="width: 75%;"></div></div>
+
+    <div class="skill-title">Python & Streamlit</div>
+    <div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+
+    <div class="skill-title">Data Structure And Algorithm</div>
+    <div class="bar"><div class="bar-fill" style="width: 35%;"></div></div>
+
+    <div class="skill-title">C++</div>
+    <div class="bar"><div class="bar-fill" style="width: 80%;"></div></div>
+
+    <div class="skill-title">SQL</div>
+    <div class="bar"><div class="bar-fill" style="width: 50%;"></div></div>
+
+
+    <div class="skill-title">Git & GitHub</div>
+    <div class="bar"><div class="bar-fill" style="width: 85%;"></div></div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card experience-timeline">
+    <div class="experience-item">
+      <h3>Software Developer Intern – Soft2Technology</h3>
+      <p><em>APRIL 2025 – Present</em></p>
+      <p>Worked on developing responsive web apps using React and integrated backend APIs. Contributed to bug fixes and UI enhancements.</p>
+    </div>
+    <div class="experience-item">
+      <h3>Contributor</h3>
+      <p><em>june 2024 – july 2024</em></p>
+      <p>Contributed in building various development projects using javascript .</p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="card project">
+    <h3>🩺 Medical Report Analyzer</h3>
+    <p>Built with Streamlit and Gemini AI to extract, summarize and translate medical PDFs with multilingual TTS support.</p>
+  </div>
+  <div class="card project">
+    <h3>🌾 Fitness Tracker</h3>
+    <p>AI-enabled web app that helps us find suitable and personalized fitness plan which include diet, exercises ,etc.</p>
+  </div>
+</section>
+
+<!-- Resume Section -->
+<section id="resume">
+  <h2>Resume</h2>
+  <div class="card">
+    <p>Click below to download my resume in PDF format:</p>
+    <a href="Sanya resume (2).pdf" download>
+      <button>Download Resume</button>
+    </a>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p><strong>Email:</strong> sanyasinha111@gmail.com</p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile " target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/sanyasinha1124" target="_blank">github.com/yourgithub</a></p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Your Name | All rights reserved
+</footer>
+
+</body>
+</html>
